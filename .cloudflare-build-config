@@ -1,0 +1,13 @@
+# Cloudflare Pages Build Configuration
+
+# Build command
+npm run build
+
+# Build output directory
+out
+
+# Node version
+NODE_VERSION=22
+
+# Environment variables (if needed)
+# Add any environment variables here

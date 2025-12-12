@@ -66,10 +66,34 @@ vendo365/
 
 ## 🌐 Deployment en Cloudflare Pages
 
-1. Conecta tu repositorio a Cloudflare Pages
-2. Configura el build command: `npm run build`
-3. Configura el output directory: `out`
-4. Deploy automático en cada push
+### Configuración Requerida
+
+Cuando conectes tu repositorio a Cloudflare Pages, usa esta configuración:
+
+- **Framework preset:** Next.js (Static HTML Export)
+- **Build command:** `npm run build`
+- **Build output directory:** `out`
+- **Node version:** 22 (opcional, agregar como variable de entorno `NODE_VERSION=22`)
+
+### Pasos para Deploy
+
+1. Sube tu código a GitHub
+2. Ve a Cloudflare Pages > Create a project
+3. Conecta tu repositorio
+4. Usa la configuración de arriba
+5. Click "Save and Deploy"
+
+Ver [CLOUDFLARE_DEPLOY.md](./CLOUDFLARE_DEPLOY.md) para instrucciones detalladas.
+
+### Verificar Build Localmente
+
+Antes de hacer deploy, prueba el build:
+
+```bash
+npm run build
+```
+
+Esto creará la carpeta `out/` con los archivos estáticos listos para deploy.
 
 ## 💰 Propuesta de Valor
 
