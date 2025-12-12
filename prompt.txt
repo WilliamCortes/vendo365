@@ -1,0 +1,198 @@
+Actúa como un experto en diseño web y desarrollo con Next.js especializado en landing pages de conversión para pequeños negocios en Colombia.
+
+CONTEXTO DEL NEGOCIO:
+Soy desarrollador y ofrezco tiendas online listas para usar dirigidas a artesanos, vendedores de plantas y pequeños negocios colombianos sin conocimientos técnicos. Mi propuesta de valor es simple: "Tienda online lista en 48 horas" con dominio personalizado (ejemplo: mitienda.vendo365.com), pasarela de pago (Nequi, Daviplata, tarjetas), hosting incluido Y publicación diaria automatizada con IA en Facebook e Instagram por solo $49.500/mes sin permanencia.
+
+PÚBLICO OBJETIVO:
+- Artesanos colombianos (joyería, cerámica, tejidos, decoración)
+- Vendedores de plantas (suculentas, decorativas)
+- Emprendedores de productos naturales (velas, jabones)
+- Personas de 25-50 años con poca experiencia técnica
+- Buscan empezar a vender online pero no saben cómo
+- Presupuesto MUY limitado, quieren algo rápido y sin complicaciones
+- Les frustra mantener redes sociales activas
+
+REQUISITOS TÉCNICOS:
+- Next.js 14+ con App Router
+- React Server Components donde sea posible
+- Tailwind CSS (solo clases core, sin compiler)
+- Diseño responsive mobile-first
+- Sin localStorage (usar solo estado de React)
+- Optimizado para Cloudflare Pages deployment
+
+DISEÑO REQUERIDO:
+ESTILO: Minimalista, limpio, profesional pero accesible
+COLORES: 
+- Primario: Verde confiable (#059669 o similar) - evoca crecimiento, naturaleza, dinero
+- Secundario: Naranja cálido (#F97316) - acción, emprendimiento
+- Neutros: Grises suaves, mucho espacio en blanco
+- Acentos: Usar con moderación
+
+PRINCIPIOS DE DISEÑO:
+- Espacios amplios, respiro visual
+- Tipografía clara y legible (sans-serif moderna)
+- Máximo 2-3 colores + neutros
+- Iconos simples y consistentes (usar lucide-react)
+- Sin gradientes complejos ni efectos excesivos
+- Jerarquía visual clara con tamaño y peso de fuente
+
+ESTRUCTURA DE LA LANDING:
+
+1. HERO SECTION:
+   - Headline poderoso: "Tu Tienda Online + Redes Sociales Automáticas"
+   - Subheadline: "Por solo $49.500/mes. Sin permanencia. Lista en 48 horas."
+   - Destacar el valor: precio bajo + automatización incluida
+   - CTA principal visible: "Comenzar Ahora - $49.500/mes"
+   - Badge o etiqueta: "✨ Incluye publicación diaria con IA"
+   - Imagen o ilustración de ejemplo de tienda (placeholder por ahora)
+
+2. PROBLEMA/SOLUCIÓN (énfasis en redes sociales):
+   - 3 puntos de dolor: "No tengo tiempo para publicar", "No sé qué publicar", "Crear una tienda es caro"
+   - La solución: Tienda + contenido automático por menos de un almuerzo diario
+
+3. QUÉ INCLUYE (TODO EN UNO):
+   PLAN BÁSICO - $49.500/mes:
+   
+   🌐 Tu Tienda Online:
+   - Dirección web personalizada (tutienda.vendo365.com)
+   - Hasta 30 productos
+   - Recibe pagos (Nequi, Daviplata, tarjetas)
+   - Hosting seguro incluido
+   - Soporte por WhatsApp
+   
+   🤖 Automatización con IA (LO DIFERENCIADOR):
+   - 1 publicación diaria en Facebook automática
+   - 1 publicación diaria en Instagram automática
+   - Contenido creado por IA sobre tus productos
+   - Sin que muevas un dedo
+   
+   💰 Sin Sorpresas:
+   - Sin permanencia, cancela cuando quieras
+   - Setup: $50.000 única vez
+   - Todo incluido, sin costos ocultos
+
+4. UPSELL CLARO (Crecimiento Horizontal):
+   SERVICIOS ADICIONALES:
+   
+   📱 Bot de WhatsApp con IA: +$79.500/mes
+   - Responde a tus clientes 24/7
+   - Toma pedidos automáticamente
+   - Confirma disponibilidad
+   - Nunca pierdes una venta
+   
+   (Solo mostrar este addon de forma sutil, no abrumar)
+
+5. CÓMO FUNCIONA (3 pasos súper simples):
+   - Paso 1: Me cuentas de tu negocio (10 minutos)
+   - Paso 2: En 48 horas tu tienda está lista
+   - Paso 3: La IA publica por ti todos los días
+   - Visual simple con números grandes
+
+6. POR QUÉ ES TAN ACCESIBLE (justificar el precio bajo):
+   - "Automatización = Bajo costo para ti"
+   - "Sin oficinas físicas = Ahorro que te paso"
+   - "Tecnología que trabajo = No necesitas diseñador ni programador"
+   - Mensaje: "Hago esto accesible para que más colombianos vendan online"
+
+7. COMPARACIÓN (mostrar el valor):
+   Tabla simple o cards comparativas:
+   
+   ❌ Forma Tradicional:
+   - Diseñador: $800.000+
+   - Desarrollador: $1.200.000+
+   - Community Manager: $600.000/mes
+   - Total: $2.600.000+
+   
+   ✅ Con Vendo365:
+   - Todo incluido: $49.500/mes
+   - Ahorro: $2.550.000+
+
+8. SOCIAL PROOF (preparado para futuro):
+   - Sección para testimonios (3 placeholders)
+   - "Únete a los emprendedores que ya venden 24/7"
+   - Logos placeholder de redes sociales
+
+9. FAQ (5-6 preguntas clave):
+   - ¿Necesito conocimientos técnicos? → No, nada
+   - ¿Qué pasa si no sé qué publicar? → La IA crea el contenido por ti
+   - ¿Puedo cancelar cuando quiera? → Sí, sin penalización
+   - ¿Qué pasarelas acepta? → Nequi, Daviplata, todas las tarjetas
+   - ¿Cómo funciona la publicación automática? → La IA analiza tus productos y crea posts atractivos diariamente
+   - ¿Cuánto cuesta el bot de WhatsApp? → Es opcional, +$80k/mes
+
+10. CTA FINAL (crear urgencia sutil):
+    - Headline: "Empieza a Vender Hoy Mismo"
+    - Sub: "Plazas limitadas para garantizar calidad del servicio"
+    - Formulario simple: Nombre, WhatsApp, Tipo de negocio
+    - Botón grande: "Quiero Mi Tienda por $49.500/mes"
+    - Nota pequeña: "Te contacto en menos de 2 horas"
+
+TEXTOS Y COPYWRITING:
+- Lenguaje ultra simple, colombiano, muy cercano
+- Enfatizar el PRECIO BAJO como ventaja competitiva
+- Destacar que la automatización de redes está INCLUIDA (no es extra)
+- Comparar con costos tradicionales para mostrar el ahorro
+- Usar emojis con moderación para hacer más amigable
+- Números concretos: "48 horas", "$49.500", "1 publicación diaria", "$50.000 setup"
+
+ESTRATEGIA DE PRICING EN LA PÁGINA:
+- Precio principal MUY visible: $49.500/mes
+- Secundario: Setup $50.000 (una vez)
+- Upsell sutil al final: Bot WhatsApp +$79.500/mes
+- NUNCA mostrar planes múltiples, solo uno + el addon opcional
+
+PSICOLOGÍA DE VENTA:
+- "$49.500" en lugar de "$50.000" (pricing psicológico)
+- "Menos de $2.000 al día" como alternativa de mostrar el precio
+- "Sin permanencia" repetido 2-3 veces
+- Enfoque en "qué obtienes" no en "qué pagas"
+
+FORMULARIO DE CONTACTO:
+- Solo 3 campos: Nombre, WhatsApp, Tipo de negocio (dropdown)
+- Dropdown opciones: Artesanías, Plantas, Alimentos, Ropa, Servicios, Otro
+- Botón: "Solicitar Mi Tienda"
+- Sin email (solo WhatsApp para comunicación directa)
+- Validación simple
+- Por ahora solo console.log los datos
+
+CONSIDERACIONES MOBILE-FIRST:
+- El precio debe verse GIGANTE en móvil
+- Comparación tradicional vs Vendo365 debe ser clara en mobile
+- CTA siempre visible (considerar sticky button)
+- Textos cortos, escaneable
+
+NO INCLUIR:
+- Múltiples planes o tiers
+- Comparación de planes
+- Tablas complejas de features
+- Animaciones complejas
+- Videos
+- Popups
+- Timers de urgencia falsa
+
+LLAMADOS A LA ACCIÓN:
+Usar variaciones como:
+- "Comenzar por $49.500/mes"
+- "Quiero mi tienda"
+- "Empezar ahora"
+- "Solicitar mi tienda"
+NO usar: "Comprar", "Contratar", "Adquirir"
+
+ENTREGABLES:
+Crea un artifact con Next.js (application/vnd.ant.react) que contenga:
+1. Componente principal de la landing page
+2. Estructura completa y funcional
+3. Estilos con Tailwind inline
+4. Pricing strategy clara y atractiva
+5. Énfasis en automatización incluida
+6. Formulario funcional
+7. Preparado para Cloudflare Pages
+
+TONO GENERAL:
+- Accesible y esperanzador
+- "Tú también puedes vender online"
+- "No necesitas ser experto"
+- "Invierte en tu negocio sin quebrarte"
+- Empático con las limitaciones de presupuesto
+
+Crea esta landing page ahora enfocándote en el VALOR INCREÍBLE del precio bajo + automatización incluida.
