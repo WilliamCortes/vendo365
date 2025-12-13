@@ -1,107 +1,36 @@
-# Vendo365 - Landing Page
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Landing page para Vendo365: Tu tienda online + redes sociales automáticas por solo $49.500/mes.
+## Getting Started
 
-## 🚀 Inicio Rápido
+First, run the development server:
 
-### Instalar dependencias
-```bash
-npm install
-```
-
-### Ejecutar en desarrollo
 ```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Construir para producción
-```bash
-npm run build
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-### Exportar para Cloudflare Pages
-```bash
-npm run build
-```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## 📁 Estructura del Proyecto
+## Learn More
 
-```
-vendo365/
-├── app/
-│   ├── layout.tsx      # Layout principal con metadata SEO
-│   ├── page.tsx        # Landing page principal
-│   └── globals.css     # Estilos globales con Tailwind
-├── next.config.js      # Configuración de Next.js
-├── tailwind.config.ts  # Configuración de Tailwind CSS
-└── package.json        # Dependencias y scripts
-```
+To learn more about Next.js, take a look at the following resources:
 
-## 🛠️ Tecnologías
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-- **Next.js 14+** - Framework React con App Router
-- **React 19** - Biblioteca UI
-- **TypeScript** - Tipado estático
-- **Tailwind CSS 4** - Estilos utility-first
-- **Lucide React** - Iconos
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## 📝 Scripts Disponibles
+## Deploy on Vercel
 
-- `npm run dev` - Inicia el servidor de desarrollo
-- `npm run build` - Construye la aplicación para producción
-- `npm run start` - Inicia el servidor de producción
-- `npm run lint` - Ejecuta el linter
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## 🎨 Características de la Landing
-
-- ✅ Diseño minimalista y profesional
-- ✅ Responsive mobile-first
-- ✅ SEO optimizado
-- ✅ Formulario de contacto funcional
-- ✅ Pricing strategy clara
-- ✅ Énfasis en automatización con IA
-- ✅ Optimizado para conversión
-
-## 🌐 Deployment en Cloudflare Pages
-
-### Configuración Requerida
-
-Cuando conectes tu repositorio a Cloudflare Pages, usa esta configuración:
-
-- **Framework preset:** Next.js (Static HTML Export)
-- **Build command:** `npm run build`
-- **Build output directory:** `out`
-- **Node version:** 22 (opcional, agregar como variable de entorno `NODE_VERSION=22`)
-
-### Pasos para Deploy
-
-1. Sube tu código a GitHub
-2. Ve a Cloudflare Pages > Create a project
-3. Conecta tu repositorio
-4. Usa la configuración de arriba
-5. Click "Save and Deploy"
-
-Ver [CLOUDFLARE_DEPLOY.md](./CLOUDFLARE_DEPLOY.md) para instrucciones detalladas.
-
-### Verificar Build Localmente
-
-Antes de hacer deploy, prueba el build:
-
-```bash
-npm run build
-```
-
-Esto creará la carpeta `out/` con los archivos estáticos listos para deploy.
-
-## 💰 Propuesta de Valor
-
-**$49.500/mes** - Todo incluido:
-- Tienda online personalizada
-- Publicación diaria automática en Facebook e Instagram
-- Pasarela de pagos (Nequi, Daviplata, tarjetas)
-- Hosting incluido
-- Sin permanencia
-
-**Opcional:** Bot de WhatsApp con IA por +$80.000/mes
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

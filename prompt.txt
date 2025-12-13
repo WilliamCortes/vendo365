@@ -13,7 +13,7 @@ PÚBLICO OBJETIVO:
 - Les frustra mantener redes sociales activas
 
 REQUISITOS TÉCNICOS:
-- Next.js 14+ con App Router
+- Next.js 16.0.10 con App Router
 - React Server Components donde sea posible
 - Tailwind CSS (solo clases core, sin compiler)
 - Diseño responsive mobile-first

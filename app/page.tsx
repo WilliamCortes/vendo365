@@ -1,539 +1,263 @@
-'use client';
+import { CheckCircle, Clock, DollarSign, Zap, Users, MessageCircle, Star, ChevronRight, Phone, Store, Bot, Globe, Shield, HeadphonesIcon } from 'lucide-react';
+import ContactForm from './components/ContactForm';
 
-import { useState } from 'react';
-import { Check, X, Sparkles, Store, Zap, MessageCircle, Clock, Shield, TrendingUp, Instagram, Facebook, ShoppingBag, CreditCard, Smartphone } from 'lucide-react';
-
-export default function LandingPage() {
-  const [formData, setFormData] = useState({
-    nombre: '',
-    whatsapp: '',
-    tipoNegocio: ''
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Formulario enviado:', formData);
-    alert('¡Gracias! Te contactaremos por WhatsApp en menos de 2 horas 🚀');
-    setFormData({ nombre: '', whatsapp: '', tipoNegocio: '' });
-  };
-
+export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-gray-900 font-sans">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-emerald-50 to-white pt-20 pb-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4" />
-              Incluye publicación diaria con IA
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Tu Tienda Online +<br />
-              <span className="text-emerald-600">Redes Sociales Automáticas</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-4">
-              Por solo <span className="text-emerald-600 font-bold text-3xl md:text-4xl">$49.500/mes</span>
-            </p>
-            <p className="text-lg text-gray-500 mb-8">
-              Sin permanencia • Lista en 48 horas • Todo incluido
-            </p>
-            <button 
-              onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg text-lg font-semibold shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
-            >
-              Comenzar por $49.500/mes
-            </button>
-            <p className="text-sm text-gray-500 mt-4">
-              Menos de $2.000 al día para tener tu negocio online
-            </p>
+      <section className="bg-gradient-to-br from-emerald-50 to-white py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <Zap className="w-4 h-4 mr-2" />
+            ✨ Incluye publicación diaria con IA
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gray-900">
+            Tu Tienda Online + Redes Sociales Automáticas
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-600 mb-8">
+            Por solo <span className="text-emerald-600 font-bold">$49.500/mes</span>. Sin permanencia. Lista en 48 horas.
+          </p>
+          <button className="bg-emerald-600 hover:bg-emerald-700 text-white text-lg font-semibold py-4 px-8 rounded-lg transition-colors">
+            Comenzar Ahora - $49.500/mes
+          </button>
+          <div className="mt-8">
+            <img src="/placeholder-store.png" alt="Ejemplo de tienda online" className="mx-auto max-w-md rounded-lg shadow-lg" />
           </div>
         </div>
       </section>
 
       {/* Problema/Solución */}
-      <section className="py-16 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-            ¿Te suena familiar?
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
-                <Clock className="w-6 h-6 text-red-600" />
-              </div>
-              <h3 className="font-semibold text-lg mb-2 text-gray-900">No tengo tiempo para publicar</h3>
-              <p className="text-gray-600">Entre producir y vender, ¿quién tiene tiempo para redes sociales?</p>
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">¿Te suena familiar?</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <Clock className="w-16 h-16 text-red-500 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">No tengo tiempo para publicar</h3>
+              <p className="text-gray-600">Las redes sociales me quitan horas que podría usar en mi negocio</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
-                <MessageCircle className="w-6 h-6 text-red-600" />
-              </div>
-              <h3 className="font-semibold text-lg mb-2 text-gray-900">No sé qué publicar</h3>
-              <p className="text-gray-600">Crear contenido atractivo es difícil y toma mucho tiempo</p>
+            <div className="text-center">
+              <MessageCircle className="w-16 h-16 text-red-500 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">No sé qué publicar</h3>
+              <p className="text-gray-600">¿Qué contenido funciona? ¿Cómo atraigo clientes?</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
-                <CreditCard className="w-6 h-6 text-red-600" />
-              </div>
-              <h3 className="font-semibold text-lg mb-2 text-gray-900">Crear una tienda es caro</h3>
-              <p className="text-gray-600">Diseñadores y programadores cobran millones que no tengo</p>
+            <div className="text-center">
+              <DollarSign className="w-16 h-16 text-red-500 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Crear una tienda es caro</h3>
+              <p className="text-gray-600">Diseñadores y programadores cuestan una fortuna</p>
             </div>
           </div>
-          <div className="text-center bg-emerald-600 text-white p-8 rounded-xl">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              La Solución: Tienda + Contenido Automático
-            </h3>
-            <p className="text-xl">
-              Por menos de un almuerzo diario, tu negocio vende 24/7 y publica solo
-            </p>
+          <div className="text-center mt-12">
+            <h3 className="text-2xl font-bold text-emerald-600 mb-4">La solución: Tienda + contenido automático por menos de un almuerzo diario</h3>
           </div>
         </div>
       </section>
 
       {/* Qué Incluye */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Todo lo que Necesitas en Un Solo Lugar
-            </h2>
-            <p className="text-xl text-gray-600">
-              Plan Básico - <span className="text-emerald-600 font-bold">$49.500/mes</span>
-            </p>
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Todo lo que Incluye por $49.500/mes</h2>
+          <div className="bg-emerald-50 rounded-lg p-8 mb-8">
+            <h3 className="text-2xl font-bold text-emerald-600 mb-6">🌐 Tu Tienda Online:</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center"><CheckCircle className="w-5 h-5 text-emerald-600 mr-3" /> Dirección web personalizada (tutienda.vendo365.com)</li>
+              <li className="flex items-center"><CheckCircle className="w-5 h-5 text-emerald-600 mr-3" /> Hasta 30 productos</li>
+              <li className="flex items-center"><CheckCircle className="w-5 h-5 text-emerald-600 mr-3" /> Recibe pagos (Nequi, Daviplata, tarjetas)</li>
+              <li className="flex items-center"><CheckCircle className="w-5 h-5 text-emerald-600 mr-3" /> Hosting seguro incluido</li>
+              <li className="flex items-center"><CheckCircle className="w-5 h-5 text-emerald-600 mr-3" /> Soporte por WhatsApp</li>
+            </ul>
           </div>
+          <div className="bg-orange-50 rounded-lg p-8 mb-8">
+            <h3 className="text-2xl font-bold text-orange-600 mb-6">🤖 Automatización con IA (Lo que te diferencia):</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center"><CheckCircle className="w-5 h-5 text-orange-600 mr-3" /> 1 publicación diaria en Facebook automática</li>
+              <li className="flex items-center"><CheckCircle className="w-5 h-5 text-orange-600 mr-3" /> 1 publicación diaria en Instagram automática</li>
+              <li className="flex items-center"><CheckCircle className="w-5 h-5 text-orange-600 mr-3" /> Contenido creado por IA sobre tus productos</li>
+              <li className="flex items-center"><CheckCircle className="w-5 h-5 text-orange-600 mr-3" /> Sin que muevas un dedo</li>
+            </ul>
+          </div>
+          <div className="bg-gray-50 rounded-lg p-8">
+            <h3 className="text-2xl font-bold text-gray-700 mb-6">💰 Sin Sorpresas:</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center"><CheckCircle className="w-5 h-5 text-gray-600 mr-3" /> Sin permanencia, cancela cuando quieras</li>
+              <li className="flex items-center"><CheckCircle className="w-5 h-5 text-gray-600 mr-3" /> Setup: $50.000 única vez</li>
+              <li className="flex items-center"><CheckCircle className="w-5 h-5 text-gray-600 mr-3" /> Todo incluido, sin costos ocultos</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {/* Tu Tienda Online */}
-            <div className="bg-white border-2 border-gray-200 rounded-xl p-8">
-              <div className="w-14 h-14 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
-                <Store className="w-8 h-8 text-emerald-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">🌐 Tu Tienda Online</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Dirección web personalizada (tutienda.vendo365.com)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Hasta 30 productos</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Recibe pagos (Nequi, Daviplata, tarjetas)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Hosting seguro incluido</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Soporte por WhatsApp</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Automatización con IA */}
-            <div className="bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-xl p-8 text-white transform md:scale-105 shadow-xl">
-              <div className="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center mb-6">
-                <Sparkles className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">🤖 Automatización con IA</h3>
-              <p className="text-emerald-100 text-sm mb-4">LO DIFERENCIADOR</p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span>1 publicación diaria en Facebook automática</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span>1 publicación diaria en Instagram automática</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span>Contenido creado por IA sobre tus productos</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="font-semibold">Sin que muevas un dedo</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Sin Sorpresas */}
-            <div className="bg-white border-2 border-gray-200 rounded-xl p-8">
-              <div className="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
-                <Shield className="w-8 h-8 text-orange-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">💰 Sin Sorpresas</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Sin permanencia, cancela cuando quieras</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Setup: $50.000 única vez</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Todo incluido, sin costos ocultos</span>
-                </li>
-              </ul>
-            </div>
+      {/* Upsell */}
+      <section className="py-8 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-xl font-semibold mb-4">¿Quieres vender aún más?</h3>
+          <div className="bg-white rounded-lg p-6 max-w-md mx-auto">
+            <Bot className="w-12 h-12 text-orange-500 mx-auto mb-4" />
+            <h4 className="font-bold mb-2">Bot de WhatsApp con IA</h4>
+            <p className="text-sm text-gray-600 mb-4">Responde a tus clientes 24/7 y toma pedidos automáticamente</p>
+            <p className="text-orange-600 font-semibold">+$79.500/mes</p>
           </div>
         </div>
       </section>
 
       {/* Cómo Funciona */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
-            Súper Simple, Solo 3 Pasos
-          </h2>
-          <div className="grid md:grid-cols-3 gap-12">
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Cómo Funciona (Súper Simple)</h2>
+          <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-20 h-20 bg-emerald-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6">
-                1
+              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-emerald-600">1</span>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Me cuentas de tu negocio</h3>
-              <p className="text-gray-600">Solo 10 minutos por WhatsApp para conocer tus productos</p>
+              <h3 className="text-xl font-semibold mb-2">Me cuentas de tu negocio</h3>
+              <p className="text-gray-600">10 minutos por WhatsApp</p>
             </div>
             <div className="text-center">
-              <div className="w-20 h-20 bg-emerald-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6">
-                2
+              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-emerald-600">2</span>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">En 48 horas tu tienda está lista</h3>
-              <p className="text-gray-600">Yo me encargo de todo, tú solo revisas y apruebas</p>
+              <h3 className="text-xl font-semibold mb-2">En 48 horas tu tienda está lista</h3>
+              <p className="text-gray-600">Personalizada para tu negocio</p>
             </div>
             <div className="text-center">
-              <div className="w-20 h-20 bg-emerald-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6">
-                3
+              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-emerald-600">3</span>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">La IA publica por ti todos los días</h3>
-              <p className="text-gray-600">Despierta cada día con contenido nuevo en tus redes</p>
+              <h3 className="text-xl font-semibold mb-2">La IA publica por ti todos los días</h3>
+              <p className="text-gray-600">Contenido fresco y atractivo</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Por Qué Es Tan Accesible */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-            ¿Por Qué Es Tan Accesible?
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-emerald-50 p-6 rounded-lg">
-              <Zap className="w-10 h-10 text-emerald-600 mb-3" />
-              <h3 className="font-bold text-lg mb-2 text-gray-900">Automatización = Bajo costo para ti</h3>
-              <p className="text-gray-600">La tecnología hace el trabajo pesado</p>
+      {/* Por Qué Accesible */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-8">¿Por qué tan accesible?</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <Zap className="w-12 h-12 text-emerald-600 mx-auto mb-4" />
+              <h3 className="font-semibold mb-2">Automatización = Bajo costo para ti</h3>
+              <p className="text-gray-600">La IA hace el trabajo de marketing por menos</p>
             </div>
-            <div className="bg-emerald-50 p-6 rounded-lg">
-              <Store className="w-10 h-10 text-emerald-600 mb-3" />
-              <h3 className="font-bold text-lg mb-2 text-gray-900">Sin oficinas físicas</h3>
-              <p className="text-gray-600">Ese ahorro te lo paso a ti</p>
+            <div>
+              <Globe className="w-12 h-12 text-emerald-600 mx-auto mb-4" />
+              <h3 className="font-semibold mb-2">Sin oficinas físicas = Ahorro que te paso</h3>
+              <p className="text-gray-600">Todo online, costos operativos mínimos</p>
             </div>
-            <div className="bg-emerald-50 p-6 rounded-lg">
-              <TrendingUp className="w-10 h-10 text-emerald-600 mb-3" />
-              <h3 className="font-bold text-lg mb-2 text-gray-900">Tecnología que yo trabajo</h3>
-              <p className="text-gray-600">No necesitas diseñador ni programador</p>
-            </div>
-            <div className="bg-emerald-50 p-6 rounded-lg">
-              <Sparkles className="w-10 h-10 text-emerald-600 mb-3" />
-              <h3 className="font-bold text-lg mb-2 text-gray-900">Mi misión</h3>
-              <p className="text-gray-600">Hacer esto accesible para más colombianos</p>
+            <div>
+              <Shield className="w-12 h-12 text-emerald-600 mx-auto mb-4" />
+              <h3 className="font-semibold mb-2">Tecnología que trabajo = No necesitas diseñador ni programador</h3>
+              <p className="text-gray-600">Años de experiencia hacen esto posible</p>
             </div>
           </div>
+          <p className="text-lg mt-8 text-emerald-600 font-semibold">Hago esto accesible para que más colombianos vendan online</p>
         </div>
       </section>
 
       {/* Comparación */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-            Mira Cuánto Te Ahorras
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Forma Tradicional */}
-            <div className="bg-white border-2 border-red-200 rounded-xl p-8">
-              <div className="flex items-center gap-2 mb-6">
-                <X className="w-6 h-6 text-red-600" />
-                <h3 className="text-2xl font-bold text-gray-900">Forma Tradicional</h3>
-              </div>
-              <ul className="space-y-4 mb-6">
-                <li className="flex justify-between items-center pb-3 border-b border-gray-200">
-                  <span className="text-gray-700">Diseñador</span>
-                  <span className="font-semibold text-gray-900">$800.000+</span>
-                </li>
-                <li className="flex justify-between items-center pb-3 border-b border-gray-200">
-                  <span className="text-gray-700">Desarrollador</span>
-                  <span className="font-semibold text-gray-900">$1.200.000+</span>
-                </li>
-                <li className="flex justify-between items-center pb-3 border-b border-gray-200">
-                  <span className="text-gray-700">Community Manager</span>
-                  <span className="font-semibold text-gray-900">$600.000/mes</span>
-                </li>
-              </ul>
-              <div className="pt-4 border-t-2 border-red-300">
-                <div className="flex justify-between items-center">
-                  <span className="text-lg font-bold text-gray-900">Total</span>
-                  <span className="text-2xl font-bold text-red-600">$2.600.000+</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Con Vendo365 */}
-            <div className="bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-xl p-8 text-white">
-              <div className="flex items-center gap-2 mb-6">
-                <Check className="w-6 h-6" />
-                <h3 className="text-2xl font-bold">Con Vendo365</h3>
-              </div>
-              <ul className="space-y-4 mb-6">
-                <li className="flex justify-between items-center pb-3 border-b border-emerald-500">
-                  <span>Todo incluido</span>
-                  <span className="font-semibold">$49.500/mes</span>
-                </li>
-                <li className="flex justify-between items-center pb-3 border-b border-emerald-500">
-                  <span>Setup inicial</span>
-                  <span className="font-semibold">$50.000 (una vez)</span>
-                </li>
-                <li className="flex justify-between items-center pb-3 border-b border-emerald-500">
-                  <span>Tienda + IA + Hosting</span>
-                  <span className="font-semibold">✓ Incluido</span>
-                </li>
-              </ul>
-              <div className="pt-4 border-t-2 border-emerald-400">
-                <div className="flex justify-between items-center mb-3">
-                  <span className="text-lg font-bold">Total primer mes</span>
-                  <span className="text-2xl font-bold">$99.500</span>
-                </div>
-                <div className="bg-white/20 rounded-lg p-3 text-center">
-                  <p className="text-sm mb-1">Ahorro vs tradicional:</p>
-                  <p className="text-2xl font-bold">$2.550.000+</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Upsell Sutil - Bot WhatsApp */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-orange-50 to-orange-100 border-2 border-orange-200 rounded-xl p-8">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Smartphone className="w-6 h-6 text-white" />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                  ¿Quieres vender aún más? 📱 Bot de WhatsApp con IA
-                </h3>
-                <p className="text-gray-700 mb-4">Servicio adicional opcional: <span className="font-bold text-orange-600">+$80.000/mes</span></p>
-                <ul className="space-y-2 mb-4">
-                  <li className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Responde a tus clientes 24/7</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Toma pedidos automáticamente</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Confirma disponibilidad</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700 font-semibold">Nunca pierdes una venta</span>
-                  </li>
-                </ul>
-                <p className="text-sm text-gray-600 italic">Puedes agregarlo cuando quieras, no es obligatorio</p>
-              </div>
+          <h2 className="text-3xl font-bold text-center mb-12">Mira el Ahorro</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="border-2 border-red-200 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-red-600 mb-4">❌ Forma Tradicional</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>Diseñador: $800.000+</li>
+                <li>Desarrollador: $1.200.000+</li>
+                <li>Community Manager: $600.000/mes</li>
+                <li><strong>Total: $2.600.000+</strong></li>
+              </ul>
+            </div>
+            <div className="border-2 border-emerald-200 rounded-lg p-6 bg-emerald-50">
+              <h3 className="text-xl font-bold text-emerald-600 mb-4">✅ Con Vendo365</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>Todo incluido: $49.500/mes</li>
+                <li>Setup único: $50.000</li>
+                <li><strong>Ahorro: $2.550.000+</strong></li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
       {/* Social Proof */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
-            Únete a los Emprendedores que Ya Venden 24/7
-          </h2>
-          <p className="text-center text-gray-600 mb-12">Pronto aquí verás historias de éxito</p>
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-12">Únete a los emprendedores que ya venden 24/7</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-white p-6 rounded-lg shadow-sm">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-12 h-12 bg-gray-200 rounded-full"></div>
-                  <div>
-                    <div className="h-4 bg-gray-200 rounded w-24 mb-2"></div>
-                    <div className="h-3 bg-gray-100 rounded w-32"></div>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="h-3 bg-gray-100 rounded"></div>
-                  <div className="h-3 bg-gray-100 rounded"></div>
-                  <div className="h-3 bg-gray-100 rounded w-3/4"></div>
-                </div>
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)}
               </div>
-            ))}
-          </div>
-          <div className="flex justify-center gap-6 mt-12">
-            <div className="flex items-center gap-2 text-gray-600">
-              <Facebook className="w-6 h-6" />
-              <span className="font-medium">Facebook</span>
+              <p className="text-gray-600 mb-4">"Mi tienda está lista y la IA publica por mí. Increíble valor."</p>
+              <p className="font-semibold">- María, Artesana de Joyería</p>
             </div>
-            <div className="flex items-center gap-2 text-gray-600">
-              <Instagram className="w-6 h-6" />
-              <span className="font-medium">Instagram</span>
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)}
+              </div>
+              <p className="text-gray-600 mb-4">"Sin conocimientos técnicos y ya vendo online. Fantástico."</p>
+              <p className="font-semibold">- Carlos, Vendedor de Plantas</p>
             </div>
-            <div className="flex items-center gap-2 text-gray-600">
-              <ShoppingBag className="w-6 h-6" />
-              <span className="font-medium">Tienda Online</span>
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)}
+              </div>
+              <p className="text-gray-600 mb-4">"El precio es increíble. Todo incluido por tan poco."</p>
+              <p className="font-semibold">- Ana, Productos Naturales</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-20 px-6">
+      <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-            Preguntas Frecuentes
-          </h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Preguntas Frecuentes</h2>
           <div className="space-y-6">
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h3 className="font-bold text-lg mb-2 text-gray-900">¿Necesito conocimientos técnicos?</h3>
-              <p className="text-gray-600">No, absolutamente nada. Yo me encargo de todo lo técnico. Tú solo te enfocas en vender.</p>
+            <div className="border-b border-gray-200 pb-4">
+              <h3 className="text-lg font-semibold mb-2">¿Necesito conocimientos técnicos?</h3>
+              <p className="text-gray-600">No, nada. Yo me encargo de todo. Solo me cuentas de tu negocio.</p>
             </div>
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h3 className="font-bold text-lg mb-2 text-gray-900">¿Qué pasa si no sé qué publicar en redes?</h3>
-              <p className="text-gray-600">¡Esa es la magia! La IA crea el contenido por ti automáticamente. Analiza tus productos y genera publicaciones atractivas todos los días.</p>
+            <div className="border-b border-gray-200 pb-4">
+              <h3 className="text-lg font-semibold mb-2">¿Qué pasa si no sé qué publicar?</h3>
+              <p className="text-gray-600">La IA crea el contenido por ti. Analiza tus productos y genera posts atractivos diariamente.</p>
             </div>
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h3 className="font-bold text-lg mb-2 text-gray-900">¿Puedo cancelar cuando quiera?</h3>
-              <p className="text-gray-600">Sí, sin permanencia y sin penalización. Si decides cancelar, simplemente me avisas.</p>
+            <div className="border-b border-gray-200 pb-4">
+              <h3 className="text-lg font-semibold mb-2">¿Puedo cancelar cuando quiera?</h3>
+              <p className="text-gray-600">Sí, sin penalización. Sin permanencia forzada.</p>
             </div>
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h3 className="font-bold text-lg mb-2 text-gray-900">¿Qué pasarelas de pago acepta?</h3>
-              <p className="text-gray-600">Nequi, Daviplata y todas las tarjetas de crédito y débito. Tus clientes pueden pagar como prefieran.</p>
+            <div className="border-b border-gray-200 pb-4">
+              <h3 className="text-lg font-semibold mb-2">¿Qué pasarelas acepta?</h3>
+              <p className="text-gray-600">Nequi, Daviplata, todas las tarjetas de crédito y débito.</p>
             </div>
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h3 className="font-bold text-lg mb-2 text-gray-900">¿Cómo funciona la publicación automática?</h3>
-              <p className="text-gray-600">La IA analiza tus productos, crea textos atractivos y publica 1 vez al día en Facebook e Instagram. Todo automático, sin que tengas que hacer nada.</p>
+            <div className="border-b border-gray-200 pb-4">
+              <h3 className="text-lg font-semibold mb-2">¿Cómo funciona la publicación automática?</h3>
+              <p className="text-gray-600">La IA analiza tus productos, crea descripciones atractivas y publica en tus redes sociales todos los días.</p>
             </div>
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h3 className="font-bold text-lg mb-2 text-gray-900">¿Cuánto cuesta el bot de WhatsApp?</h3>
-              <p className="text-gray-600">Es opcional y cuesta +$80.000/mes adicionales. No es obligatorio, puedes agregarlo cuando quieras.</p>
+            <div className="border-b border-gray-200 pb-4">
+              <h3 className="text-lg font-semibold mb-2">¿Cuánto cuesta el bot de WhatsApp?</h3>
+              <p className="text-gray-600">Es opcional, +$79.500/mes. Responde automáticamente y toma pedidos 24/7.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Final */}
-      <section id="contacto" className="py-20 px-6 bg-gradient-to-br from-emerald-600 to-emerald-700">
-        <div className="max-w-3xl mx-auto text-center text-white">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Empieza a Vender Hoy Mismo
-          </h2>
-          <p className="text-xl mb-8 text-emerald-100">
-            Plazas limitadas para garantizar calidad del servicio
-          </p>
-          
-          <div className="bg-white rounded-xl p-8 text-left">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="nombre" className="block text-sm font-medium text-gray-700 mb-2">
-                  Tu nombre
-                </label>
-                <input
-                  type="text"
-                  id="nombre"
-                  required
-                  value={formData.nombre}
-                  onChange={(e) => setFormData({ ...formData, nombre: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-gray-900"
-                  placeholder="Juan Pérez"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="whatsapp" className="block text-sm font-medium text-gray-700 mb-2">
-                  Tu WhatsApp
-                </label>
-                <input
-                  type="tel"
-                  id="whatsapp"
-                  required
-                  value={formData.whatsapp}
-                  onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-gray-900"
-                  placeholder="300 123 4567"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="tipoNegocio" className="block text-sm font-medium text-gray-700 mb-2">
-                  Tipo de negocio
-                </label>
-                <select
-                  id="tipoNegocio"
-                  required
-                  value={formData.tipoNegocio}
-                  onChange={(e) => setFormData({ ...formData, tipoNegocio: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-gray-900"
-                >
-                  <option value="">Selecciona una opción</option>
-                  <option value="artesanias">Artesanías</option>
-                  <option value="plantas">Plantas</option>
-                  <option value="alimentos">Alimentos</option>
-                  <option value="ropa">Ropa</option>
-                  <option value="servicios">Servicios</option>
-                  <option value="otro">Otro</option>
-                </select>
-              </div>
-              
-              <button
-                type="submit"
-                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg text-lg font-semibold shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
-              >
-                Quiero Mi Tienda por $49.500/mes
-              </button>
-              
-              <p className="text-center text-sm text-gray-600">
-                Te contacto en menos de 2 horas por WhatsApp 💬
-              </p>
-            </form>
-          </div>
+      <section className="py-16 px-4 bg-emerald-600 text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4">Empieza a Vender Hoy Mismo</h2>
+          <p className="text-xl mb-8">Plazas limitadas para garantizar calidad del servicio</p>
+          <ContactForm />
+          <p className="text-sm mt-4">Te contacto en menos de 2 horas</p>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-12 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-2xl font-bold text-white mb-4">Vendo365</h3>
-          <p className="mb-6">Tu tienda online + redes sociales automáticas</p>
-          <div className="flex justify-center gap-6 mb-6">
-            <Facebook className="w-6 h-6 hover:text-white cursor-pointer transition-colors" />
-            <Instagram className="w-6 h-6 hover:text-white cursor-pointer transition-colors" />
-            <MessageCircle className="w-6 h-6 hover:text-white cursor-pointer transition-colors" />
-          </div>
-          <p className="text-sm">
-            © 2024 Vendo365. Hecho con ❤️ para emprendedores colombianos.
-          </p>
-        </div>
-      </footer>
-
-      {/* Sticky CTA Mobile */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t-2 border-emerald-600 p-4 shadow-lg z-50">
-        <button
-          onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
-          className="w-full bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-semibold shadow-lg"
-        >
-          Empezar por $49.500/mes
+      {/* Sticky CTA for Mobile */}
+      <div className="fixed bottom-0 left-0 right-0 bg-emerald-600 text-white p-4 md:hidden">
+        <button className="w-full bg-white text-emerald-600 font-semibold py-3 rounded-lg">
+          Comenzar por $49.500/mes
         </button>
       </div>
     </div>
