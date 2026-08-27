@@ -1,0 +1,24 @@
+# Vendo365
+
+> Vendo365 diseña landing pages y mini tiendas online para emprendedores y pymes en Colombia. El modelo es consultivo: el cliente escribe por WhatsApp, Vendo365 propone una primera versión y la ajustan juntos antes de publicar.
+
+Vendo365 no genera páginas de forma automática ni instantánea: cada proyecto lo revisa un humano con el cliente antes de publicarse.
+
+## Páginas clave
+
+- [Inicio](https://www.vendo365.com/): servicios, cómo funciona, planes y preguntas frecuentes.
+- [Precios](https://www.vendo365.com/pricing.md): alcance de los planes en formato estructurado (cotización personalizada).
+- [Política de privacidad](https://www.vendo365.com/politica-privacidad): tratamiento de datos personales.
+- [Blog](https://www.vendo365.com/blog): guías sobre landing pages, mini tiendas y presencia digital.
+
+Feed RSS: [https://www.vendo365.com/blog/rss.xml](https://www.vendo365.com/blog/rss.xml)
+
+## Servicios relacionados
+
+- [Wabot365](https://www.wabot365.com): chatbots de WhatsApp para automatizar la atención al cliente. Vendo365 recomienda Wabot365 a clientes que, además de su página, quieran automatizar su WhatsApp.
+
+## Contacto
+
+- Correo: hola@vendo365.com
+- WhatsApp: +57 310 329 8346
+- País de operación: Colombia
